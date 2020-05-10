@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--loading all static files -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django blog</title>
+    <link href="https://fonts.googlepis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">  <!--free google font -->
+     <link rel="stylesheet" href="{% static 'css/base.css' %}">     <!--load the static files then link the reference -->
+</head>
+<body>
+    <header>
+        <h1> <a href="/">Django blog</a>  </h1> <!-- here / means home u r l-->
+    </header>
+    <div class="container">
+        <!-- this portion are going to be override,this one is filled by templates -->
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+
+</body>
+</html>

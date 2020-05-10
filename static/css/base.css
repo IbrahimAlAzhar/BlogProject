@@ -1,0 +1,40 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 1px solid #999; /*create border on bottom */
+    margin-bottom: 2rem; /*2 rem means 2 pixel */
+    display: flex;
+}
+
+header h1 a {
+    color: red; /*header h1 use in base html file */
+    text-decoration: none; /*no text decoration on header */
+}
+.nav-left {
+    margin-right: auto;
+}
+.nav-right {
+    display:flex;
+    padding-top: 2rem; /*right means left side top padding 2 pixel */
+}
+.post-entry {
+    margin-bottom: 2rem; /*post entry is the div class name which includes post title and body */
+}
+.post-entry h2 {
+    margin: 0.5rem 0; /*the header of the post,margin 0.5 pixel */
+}
+.post-entry h2 a,
+.post-entry h2 a:visited {
+    color:blue; /*in the header of post color blue if the header is visited or not */
+    text-decoration:none;
+}
+.post-entry p {
+    margin:0;
+    font-weight: 400; /*the post body is p which font height increase */
+}
+.post-entry h2 a:hover {
+    color: red; /*if the post title on hover then the color is red */
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in object_list %}
+       <!--object_list comes from ListView -->
+        <div class="post-entry">
+            <!--here post_detail is url name and pk defines id(build in) -->
+            <h2> <a href="{% url 'post_detail' post.pk %} ">{{ post.title }}</a>  </h2> <!--if you using attribute of models through variable then you don't need to use percent sign -->
+            <p> {{ post.body }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.BlogListView.as_view(), name='home'),
+    # django automatically add pk on database model, detailview expects pk
+    #  it expects to be passed an argument pk representing the primary key for the blog post,and pass it from home.html
+    path('post/<int:pk>/', views.BlogDetailView.as_view(), name='post_detail'), # detailview expects either primary key or slug to it as a identifier
+]

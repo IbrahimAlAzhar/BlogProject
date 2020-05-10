@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="post-entry"> <!--post(lowercase model name)/object is build in object form detail view, -->
+     <!-- <h2>{{ post.title }}</h2> --> <!--context object from detail view is either model name(post) or object   -->
+     <!-- <p>{{ post.body }}</p> -->
+    <!--<h2>{{ my_object.title }}</h2> -->
+    <!-- <h2>{{ my_object.body }}</h2>  --> <!--here this my_object is custom object name from view class -->
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.body }}</p>
+</div>
+
+{% endblock %}
