@@ -14,11 +14,11 @@ header h1 a {
     text-decoration: none; /*no text decoration on header */
 }
 .nav-left {
-    margin-right: auto;
+    margin-right: auto; /*it is a div class name,there are no margin here */
 }
 .nav-right {
     display:flex;
-    padding-top: 2rem; /*right means left side top padding 2 pixel */
+    padding-top: 2rem; /* it is a div class name,which contain new blog post */
 }
 .post-entry {
     margin-bottom: 2rem; /*post entry is the div class name which includes post title and body */

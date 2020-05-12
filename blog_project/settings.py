@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # if i add static file in app directory then no need to add STATICFILES_DIRS on settings,then just use load static
 # keyword on template
+LOGIN_REDIRECT_URL = 'home'  # after login the redirect url is home(django build in auth)
+LOGOUT_REDIRECT_URL = 'home' # after logout the redirect url is home url

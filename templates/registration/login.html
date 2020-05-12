@@ -1,0 +1,12 @@
+<!--as the build in LoginView,by default django will look a templates folder called registration for file login.html for login -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Login</h2>
+<!--we didn't add any view logic or create a database model because the django auth system provided both for us automatically -->
+<form method="post"> <!--submitting the form is post method -->
+    {% csrf_token %}
+    {{ form.as_p }}    <!--pass from as a form -->
+    <button type="submit">Login</button>
+</form>
+{% endblock %}

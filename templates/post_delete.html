@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Delete post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you want to delete "{{ object.title }}"?</p> <!--class based view returns object as a post(lowercase model name) -->
+        <input type="submit" value="Confirm"/> <!--here a submit button so you have to create a form -->
+    </form>
+{% endblock %}
