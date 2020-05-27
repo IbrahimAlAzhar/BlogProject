@@ -3,6 +3,7 @@ from .models import Post
 from django.views.generic import ListView,DetailView,CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
+
 class BlogListView(ListView):
     model = Post
     template_name = 'home.html' # passing object_list build in to template
@@ -31,4 +32,4 @@ class BlogDeleteView(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home') # after deleting post then redirects to home(url name)
-    # reverse_lazy as opposed to just reverse so that it won't execute the URL redirect until out view has finished deleting the blog post
+    # reverse_lazy as opposed to just reverse so that it won't execute the URL redirect until our view has finished deleting the blog post
